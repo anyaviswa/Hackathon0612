@@ -7,12 +7,16 @@
 //
 
 import SwiftUI
+import UserNotifications
+import SwiftLocation
+import HealthKit
 
 struct ConsentPage: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State private var eulaAgreed = false
     @State private var locationServices = false
-    @State private var healthKitServices = true
-    @State private var primaryHealthCare = true
+    @State private var healthKitServices = false
+    @State private var primaryHealthCare = false
     var body: some View {
         VStack {
             if !eulaAgreed {
@@ -27,31 +31,85 @@ struct ConsentPage: View {
                 Toggle(isOn: $locationServices) {
                     Text("Grant location access")
                 }.padding()
+                    .onTapGesture{
+                        LocationManager.shared.requireUserAuthorization(.always)
+                }
             }
-            if eulaAgreed && locationServices {
+            if locationServices {
                 Text("We need HealthKit data to generate a risk report. We maintain user privacy.")
                 Toggle(isOn: $healthKitServices) {
                     Text("Grant HealthKit access")
                 }.padding()
+                    .onTapGesture {
+                        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                            if success {
+                                print("All set!")
+                            } else if let error = error {
+                                print(error.localizedDescription)
+                            }
+                        }
+                }
             }
-            if eulaAgreed && locationServices && healthKitServices {
+            if healthKitServices {
                 Text("Do we have your consent to share your health data with your primary care physician?")
                 Toggle(isOn: $primaryHealthCare) {
                     Text("Grant consent")
-                }.padding()
-                if primaryHealthCare {
-                    Text("Submit")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 60)
-                    .background(Color.black)
-                    .cornerRadius(35.0)
+                }.padding().onTapGesture {
+                    // Used to define the identifiers that create quantity type objects.
+                    let writeTypes = Set([
+                        HKObjectType.quantityType(forIdentifier: .bloodPressureDiastolic)!,
+                        HKObjectType.quantityType(forIdentifier: .bloodPressureSystolic)!,
+                        HKObjectType.quantityType(forIdentifier: .bodyTemperature)!,
+                        HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
+                        HKObjectType.quantityType(forIdentifier: .height)!,
+                        HKObjectType.quantityType(forIdentifier: .restingHeartRate)!,
+                        HKObjectType.workoutType(),
+                        HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                        HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
+                        HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+                        HKObjectType.quantityType(forIdentifier: .heartRate)!])
+                    
+                    let readTypes = Set([
+                        HKObjectType.characteristicType(forIdentifier: .biologicalSex)!,
+                        HKObjectType.characteristicType(forIdentifier: .bloodType)!,
+                        HKObjectType.characteristicType(forIdentifier: .dateOfBirth)!,
+                        HKObjectType.quantityType(forIdentifier: .bloodPressureDiastolic)!,
+                        HKObjectType.quantityType(forIdentifier: .bloodPressureSystolic)!,
+                        HKObjectType.quantityType(forIdentifier: .bodyTemperature)!,
+                        HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
+                        HKObjectType.quantityType(forIdentifier: .height)!,
+                        HKObjectType.quantityType(forIdentifier: .restingHeartRate)!,
+                        HKObjectType.workoutType(),
+                        HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                        HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
+                        HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+                        HKObjectType.quantityType(forIdentifier: .heartRate)!
+                    ])
+                    
+                    
+                    DataStore.shared().healthStore.requestAuthorization(toShare: writeTypes, read: readTypes, completion: { (success, error) -> Void in
+                        
+                        
+                    })
+                }
+                if eulaAgreed && locationServices && healthKitServices && primaryHealthCare {
+                    
+                    Button(action: {
+                        self.viewRouter.currentPage = "questionnairePage"
+                    }){
+                        Text("Submit")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 220, height: 60)
+                            .background(Color.black)
+                            .cornerRadius(35.0)
+                    }
                 }
             }
             
         }
-    .padding()
+        .padding()
     }
 }
 

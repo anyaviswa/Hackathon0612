@@ -18,6 +18,8 @@ struct MotherView: View {
                 ContentView()
             } else if viewRouter.currentPage == "consentPage" {
                 ConsentPage()
+            } else if viewRouter.currentPage == "questionnairePage" {
+                QuestionnairePage()
             }
         }
     }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F06AD47A6515979713C0436 /* Pods_COVID_Risk_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F405A15B56BEC7EE8731F762 /* Pods_COVID_Risk_Assessment.framework */; };
 		64613B3E2495C3C900364440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64613B3D2495C3C900364440 /* AppDelegate.swift */; };
 		64613B402495C3C900364440 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64613B3F2495C3C900364440 /* SceneDelegate.swift */; };
 		64613B422495C3C900364440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64613B412495C3C900364440 /* ContentView.swift */; };
@@ -18,6 +19,9 @@
 		64613B6E24968BA700364440 /* Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64613B6D24968BA700364440 /* Subview.swift */; };
 		64613B702496905000364440 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64613B6F2496905000364440 /* OnboardingView.swift */; };
 		64613B72249691C600364440 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64613B71249691C600364440 /* PageViewController.swift */; };
+		6468FA41249735AB00141A6E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468FA40249735AB00141A6E /* DataStore.swift */; };
+		648D5DEC2497248600248456 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648D5DEB2497248600248456 /* HealthKit.framework */; };
+		648D5DEE24972DD300248456 /* QuestionnairePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648D5DED24972DD300248456 /* QuestionnairePage.swift */; };
 		64CF9C722496B6E700566767 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CF9C712496B6E700566767 /* ViewRouter.swift */; };
 		64CF9C742496B75000566767 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CF9C732496B75000566767 /* MotherView.swift */; };
 		64CF9C762496C1EA00566767 /* ConsentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CF9C752496C1EA00566767 /* ConsentPage.swift */; };
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C46A30F4204001FE78EFEB2 /* Pods-COVID Risk Assessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID Risk Assessment.debug.xcconfig"; path = "Target Support Files/Pods-COVID Risk Assessment/Pods-COVID Risk Assessment.debug.xcconfig"; sourceTree = "<group>"; };
 		64613B3A2495C3C900364440 /* COVID Risk Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID Risk Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64613B3D2495C3C900364440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64613B3F2495C3C900364440 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +63,15 @@
 		64613B6D24968BA700364440 /* Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subview.swift; sourceTree = "<group>"; };
 		64613B6F2496905000364440 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		64613B71249691C600364440 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		6468FA40249735AB00141A6E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		648D5DEA2497248600248456 /* COVID Risk Assessment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "COVID Risk Assessment.entitlements"; sourceTree = "<group>"; };
+		648D5DEB2497248600248456 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		648D5DED24972DD300248456 /* QuestionnairePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnairePage.swift; sourceTree = "<group>"; };
 		64CF9C712496B6E700566767 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		64CF9C732496B75000566767 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
-		64CF9C752496C1EA00566767 /* ConsentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentPage.swift; sourceTree = "<group>"; };
+		64CF9C752496C1EA00566767 /* ConsentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConsentPage.swift; path = "../../../../Users/swapniljangam/Desktop/Hackathon0612/COVID-Risk/COVID Risk Assessment/COVID Risk Assessment/ConsentPage.swift"; sourceTree = DEVELOPER_DIR; };
+		A5D8D786AC2FB9D21CEF2CCB /* Pods-COVID Risk Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID Risk Assessment.release.xcconfig"; path = "Target Support Files/Pods-COVID Risk Assessment/Pods-COVID Risk Assessment.release.xcconfig"; sourceTree = "<group>"; };
+		F405A15B56BEC7EE8731F762 /* Pods_COVID_Risk_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID_Risk_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648D5DEC2497248600248456 /* HealthKit.framework in Frameworks */,
+				3F06AD47A6515979713C0436 /* Pods_COVID_Risk_Assessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C4BFF925B45B88FD92FC825 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C46A30F4204001FE78EFEB2 /* Pods-COVID Risk Assessment.debug.xcconfig */,
+				A5D8D786AC2FB9D21CEF2CCB /* Pods-COVID Risk Assessment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		64613B312495C3C900364440 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +117,8 @@
 				64613B532495C3CB00364440 /* COVID Risk AssessmentTests */,
 				64613B5E2495C3CB00364440 /* COVID Risk AssessmentUITests */,
 				64613B3B2495C3C900364440 /* Products */,
+				3C4BFF925B45B88FD92FC825 /* Pods */,
+				FEEDFAB4B22904FB492E0542 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +135,7 @@
 		64613B3C2495C3C900364440 /* COVID Risk Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				648D5DEA2497248600248456 /* COVID Risk Assessment.entitlements */,
 				64613B6D24968BA700364440 /* Subview.swift */,
 				64613B3D2495C3C900364440 /* AppDelegate.swift */,
 				64613B3F2495C3C900364440 /* SceneDelegate.swift */,
@@ -124,6 +149,8 @@
 				64CF9C712496B6E700566767 /* ViewRouter.swift */,
 				64CF9C732496B75000566767 /* MotherView.swift */,
 				64CF9C752496C1EA00566767 /* ConsentPage.swift */,
+				648D5DED24972DD300248456 /* QuestionnairePage.swift */,
+				6468FA40249735AB00141A6E /* DataStore.swift */,
 			);
 			path = "COVID Risk Assessment";
 			sourceTree = "<group>";
@@ -154,6 +181,15 @@
 			path = "COVID Risk AssessmentUITests";
 			sourceTree = "<group>";
 		};
+		FEEDFAB4B22904FB492E0542 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				648D5DEB2497248600248456 /* HealthKit.framework */,
+				F405A15B56BEC7EE8731F762 /* Pods_COVID_Risk_Assessment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64613B642495C3CC00364440 /* Build configuration list for PBXNativeTarget "COVID Risk Assessment" */;
 			buildPhases = (
+				84FFD55B6331B8CBBDED2335 /* [CP] Check Pods Manifest.lock */,
 				64613B362495C3C900364440 /* Sources */,
 				64613B372495C3C900364440 /* Frameworks */,
 				64613B382495C3C900364440 /* Resources */,
+				C3491A5409396A7E5155899F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +318,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84FFD55B6331B8CBBDED2335 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COVID Risk Assessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3491A5409396A7E5155899F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COVID Risk Assessment/Pods-COVID Risk Assessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COVID Risk Assessment/Pods-COVID Risk Assessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-COVID Risk Assessment/Pods-COVID Risk Assessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64613B362495C3C900364440 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -289,8 +369,10 @@
 				64CF9C762496C1EA00566767 /* ConsentPage.swift in Sources */,
 				64CF9C722496B6E700566767 /* ViewRouter.swift in Sources */,
 				64613B6E24968BA700364440 /* Subview.swift in Sources */,
+				6468FA41249735AB00141A6E /* DataStore.swift in Sources */,
 				64613B402495C3C900364440 /* SceneDelegate.swift in Sources */,
 				64613B72249691C600364440 /* PageViewController.swift in Sources */,
+				648D5DEE24972DD300248456 /* QuestionnairePage.swift in Sources */,
 				64CF9C742496B75000566767 /* MotherView.swift in Sources */,
 				64613B702496905000364440 /* OnboardingView.swift in Sources */,
 				64613B422495C3C900364440 /* ContentView.swift in Sources */,
@@ -456,8 +538,10 @@
 		};
 		64613B652495C3CC00364440 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C46A30F4204001FE78EFEB2 /* Pods-COVID Risk Assessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "COVID Risk Assessment/COVID Risk Assessment.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"COVID Risk Assessment/Preview Content\"";
 				DEVELOPMENT_TEAM = DAAHPA22SW;
@@ -477,8 +561,10 @@
 		};
 		64613B662495C3CC00364440 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5D8D786AC2FB9D21CEF2CCB /* Pods-COVID Risk Assessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "COVID Risk Assessment/COVID Risk Assessment.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"COVID Risk Assessment/Preview Content\"";
 				DEVELOPMENT_TEAM = DAAHPA22SW;
